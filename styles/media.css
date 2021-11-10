@@ -1,0 +1,160 @@
+:root {
+	font-size: 16px;
+	font-family:  'Open Sans';
+	--text-special: #ffde00;
+	--text-primary: #ffffff;
+	--text-secondary: #cccccc;
+	--bgcolor-primary: #333333;
+	--bgcolor-secondary: #222222;
+	--bgcolor-tertiary: #000000;
+}
+html {
+	background-color: var(--bgcolor-primary);
+}
+
+head {
+	color: #ffffff;
+}
+.webcontainer {
+	align-items: center;
+	text-align: center;
+	background-color: var(--bgcolor-primary);
+	padding: 0.5rem;
+}
+
+h1 {
+	color: var(--text-special);
+	padding: 0rem;
+}
+h2 {
+	font-style: italic;
+	color: var(--text-secondary);
+}
+h3 {
+	font-style: italic;
+	color: var(--text-secondary);
+}
+
+#title1 {
+	font-size: 7rem;
+	color: var(--text-special);
+	margin: 0px;
+}
+
+.contentcontainer {
+	color: var(--text-primary);
+	text-align: left;
+	background-color: var(--bgcolor-secondary);
+	padding: 1rem;
+}
+
+/* Footer Style + column set -J */
+.footercontainer {
+	color: var(--text-secondary);
+	text-align: left;
+	background-color: var(--bgcolor-secondary);
+	padding: 1rem;	
+}
+	.footercolumncontainer {
+		align-items: center;
+		columns: 0.5rem 5;
+		columns-gap: 5rem;
+		column-width: 0.7rem;		
+		margin: 0 auto;		
+	}
+	.footercolumnitem {
+		display: inline-grid;	
+		padding: 0.5rem;	/* gets all messed up with values < 0.5, don't mess with this unless you have to -J*/	
+	}
+
+/* Make text yellow */
+span {
+	color: var(--text-special);
+}
+
+.columncontainer {
+	columns: 2 0.5rem;
+	columns-gap: 5rem;
+	margin: 0 auto;
+}
+	.columnitem {
+		display: inline-block;
+	}
+
+/* Navbar Stylization -J */
+/* kinda works, link text not centered, excess white space for some reason. -J */
+/* navbar doesn't have a background -J */
+.navbar {
+	position: fixed;
+	background-color: var(--bgcolor-tertiary);
+	border-bottom: 2px solid var(--text-primary);
+}
+	.navbar-nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 100%;		
+	}
+
+	.nav-item {
+		width: 100%;
+		padding: 0;
+	}
+
+	.nav-link {
+		display: flex;
+		align-items: center;
+		height: 5rem;
+		padding: 10px;
+		color: var(--text-secondary);
+		text-decoration: none;
+		filter: grayscale(50%) opacity(0.7);
+	}
+
+	.nav-link:hover {
+		filter: grayscale(0%) opacity(1);
+		background: var(--bgcolor-secondary);
+		color: var(--text-special);
+	}
+	.link-text {
+		margin-left: 1rem;
+		text-align: center;
+	}
+
+li {
+	float: left;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+a {
+	background-color: var(--bgcolor-secondary);
+	color: var(--text-primary);
+}
+a:hover {
+	color: var(--text-special);
+}
+
+.formcontainer {
+	background-color: var(--bgcolor-primary);
+	padding: 1rem;
+}
+	input {
+		background-color: var(--bgcolor-tertiary);
+		color: var(--text-primary);
+	}
+
+
+/* Stylize scrollbar */
+body::-webkit-scrollbar {
+	width: 1rem;
+}
+body::-webkit-scrollbar-track {
+	background: #222222;
+}
+body::-webkit-scrollbar-thumb {
+	background: #ffde00;
+}

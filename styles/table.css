@@ -1,0 +1,31 @@
+:root {
+	font-size: 16px;
+	font-family:  'Open Sans';
+	--text-special: #ffde00;
+	--text-primary: #ffffff;
+	--text-secondary: #cccccc;
+	--bgcolor-primary: #333333;
+	--bgcolor-secondary: #222222;
+	--bgcolor-tertiary: #000000;
+}
+table {
+	align-items: center;
+	margin: auto;
+}
+
+th, td {
+	border-bottom: 2px solid var(--text-secondary);
+	padding: 0.5rem;
+}
+
+button {
+	background-color: var(--text-secondary);
+}
+
+/* centering things in css is a pain, button won't center -J */
+.stylebutton {
+	background-color: var(--bgcolor-tertiary);
+	padding: 0.2rem;
+	text-align: center;
+	align-self: center;	
+}
