@@ -24,7 +24,7 @@ button {
 
 /* centering things in css is a pain, button won't center -J */
 .stylebutton {
-	background-color: var(--bgcolor-tertiary);
+	background-color: var(--text-special);
 	padding: 0.2rem;
 	text-align: center;
 	align-self: center;	
