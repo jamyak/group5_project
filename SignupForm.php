@@ -27,8 +27,9 @@ td {
 </style>
 </head>
 <body>
+
 <?php
-@$dbConnect = new mysqli('localhost', 'root', '', 'eventplanner');
+@$dbConnect = new mysqli('localhost', 'root', '', 'accounts');
 if (mysqli_connect_errno()) {
 	echo ("<p>Error: Unable to connect to database.</p>" .
 			"<p>Error code $dbConnect->connect_errno: $dbConnect->connect_error. </p>");
@@ -42,6 +43,7 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $password = $_POST['password'];	   
 $type = 'user';
+$compname = $_POST['compname']
 
 if (!$firstname || !$lastname || !$email || !$phone || !$password) {
     echo "<p>You have not entered all the required information. </p>";
@@ -60,7 +62,7 @@ if (!get_magic_quotes_gpc()){
 
 // insert into contact database
 $sqlString = "INSERT into tbluser values " .
-				"(0, '$firstname', '$lastname', '$email', '$phone', '$password', '$type')";
+	"(0, '$firstname', '$lastname', '$email', '$phone', '$password', '$type', '$compname')";
 $result = $dbConnect->query($sqlString);
 if (!$result){	
 	echo ("<p>Error: Registration information was not added.</p>" .
@@ -77,12 +79,13 @@ $dbConnect->close();
 </div>
 <table>
 	<tr>
-		<td>User Id</td>
-		<td>First Name</td>
-		<td>Last Name</td>
-		<td>Email</td>
-		<td>Phone</td>
-		<td>Type</td>
+		<td>User Id:</td>
+		<td>First Name:</td>
+		<td>Last Name:</td>
+		<td>Email:</td>
+		<td>Phone:</td>
+		<td>Type:</td>
+		<td>Company Name:</td>
 	</tr>	
 
 <?php 
@@ -100,11 +103,12 @@ $data = mysqli_query(@$dbConnect, "SELECT * FROM tbluser where firstname = '$fir
  { 
  echo "<tr>";  
  echo "<td>" .$info['userid'] . "</td>";
- echo "<td>".$info['firstname'] . " </td>";
- echo "<td>".$info['lastname']. " </td>";
+ echo "<td>" .$info['firstname'] . " </td>";
+ echo "<td>" .$info['lastname']. " </td>";
  echo "<td>" .$info['email']. " </td>";
  echo "<td>" .$info['phone']. " </td>";
  echo "<td>" .$info['type']. " </td>";
+ echo "<td>" .$info['compname']. " </td>";
  echo "</tr>";
  } 
 

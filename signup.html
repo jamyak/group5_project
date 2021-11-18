@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>U & Us | Account</title>
+	<title>U & Us | Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="./styles/media.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
 	<!-- <script src="https://kit.fontawesome.com/b99e675b6e.js"></script> icon display script, go to font awesome for use. -J -->
@@ -34,13 +34,25 @@
 			<p id="title1">U & Us</p>
 			<h2>Warehousing and Logistics</h2>   
 			<div class="contentcontainer">
-				<h1>Account:</h1>
+				<h1>Sign Up:</h1>
 				<hr>
-				<h2>Already have an account?</h2>
-					<a href="./login.html">Click here to log in.</a>
-				<h2>Brand new users/companies can sign up with us today.</h2>
-					<a href="./signup.html">Click here to get started with us for free today!</a>
-				<br><br>					
+
+<!-- implement form function, and output results later -J -->					
+				<form action="SignupForm.php" class="formcontainer" method="post">
+					<table>
+						<tr>
+							<td>Email:</td>
+							<td><input type="text" name="email"></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><input type="Password" name="password"></td>
+						</tr>
+					</table>
+					<br>
+					<input class="stylebutton" type="submit" value="submit"/>
+				</form>
+	 
 			</div>  
 				<br>
 <!-- footer with additional info, default, do not remove. -J -->				
