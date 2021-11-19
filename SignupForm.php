@@ -34,7 +34,7 @@ if (mysqli_connect_errno()) {
 	echo ("<p>Error: Unable to connect to database.</p>" .
 			"<p>Error code $dbConnect->connect_errno: $dbConnect->connect_error. </p>");
 	exit;
-	}
+}
 
 // get data from the input boxes 
 $firstname = $_POST['firstname'];
@@ -43,22 +43,22 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $password = $_POST['password'];	   
 $type = 'user';
-$compname = $_POST['compname']
+$compname = $_POST['compname'];
 
-if (!$firstname || !$lastname || !$email || !$phone || !$password) {
+if (!$firstname || !$lastname || !$email || !$phone || !$password || !$compname) {
     echo "<p>You have not entered all the required information. </p>";
     exit;
 }
 
 // add slashes if add and strip slashes default is not turned on
 // magic_quotes_gpc is off by default in XAMPP, add \ if value contains a quote
-if (!get_magic_quotes_gpc()){
+/*if (!get_magic_quotes_gpc()){
 	$firstname = addslashes($firstname); 
 	$lastname = addslashes($lastname);
 	$email = addslashes($email);
 	$phone = addslashes($phone);
 	$password = addslashes($password);
-}
+}*/
 
 // insert into contact database
 $sqlString = "INSERT into tbluser values " .
@@ -89,7 +89,7 @@ $dbConnect->close();
 	</tr>	
 
 <?php 
-@$dbConnect = new mysqli('localhost', 'root', '', 'eventplanner');
+@$dbConnect = new mysqli('localhost', 'root', '', 'accounts');
 if (mysqli_connect_errno()) {
 	echo ("<p>Error: Unable to connect to database.</p>" .
 			"<p>Error code $dbConnect->connect_errno: $dbConnect->connect_error. </p>");
@@ -113,7 +113,7 @@ $data = mysqli_query(@$dbConnect, "SELECT * FROM tbluser where firstname = '$fir
  } 
 
 
-include'eventregistration.html'
+//include'eventregistration.html'
 ?>
 </body>
 </html>

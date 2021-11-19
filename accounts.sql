@@ -8,8 +8,8 @@ lastname varchar(10),
 email varchar(50),
 phone varchar(15),
 password varchar(20),
-type varchar(5)
-compname varchar(70),
+type varchar(5),
+compname varchar(70)
 );
 
 create table tblfood
@@ -54,7 +54,7 @@ foreign key (decorationid) references tbldecoration(decorationid)on delete casca
 foreign key (userid) references tbluser(userid)on delete cascade
 );
 
-INSERT INTO `tbluser`(`userid`, `firstname`, `lastname`, `email`, `phone`, `password`, `type`, 'compname') VALUES (1,'Chon','Lintakoon','admin','201-454-5454','admin','admin');
+INSERT INTO `tbluser`(`userid`, `firstname`, `lastname`, `email`, `phone`, `password`, `type`, `compname`) VALUES (1,'Chon','Lintakoon','admin','201-454-5454','admin','admin','FDU');
 
 INSERT INTO `tblfood`(`foodid`, `fooddesc`, `foodprice`, `foodvendor`) VALUES (111,'KOSHER FOOD',15,'Kosher People');
 INSERT INTO `tblfood`(`foodid`, `fooddesc`, `foodprice`, `foodvendor`) VALUES (222,'CHINESE FOOD',20,'Chinatown special');

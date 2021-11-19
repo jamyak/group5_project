@@ -11,11 +11,14 @@
 table {
 	align-items: center;
 	margin: auto;
+	background-color: var(--bgcolor-secondary);
+	padding: 0.5rem;
 }
 
-th, td {
+th, td, tr {
 	border-bottom: 2px solid var(--text-secondary);
 	padding: 0.5rem;
+	color: var(--text-primary);
 }
 
 button {
