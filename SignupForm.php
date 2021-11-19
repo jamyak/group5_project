@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style tyle="text/css">
-h1 {
-	text-align: center;
-	}
-table {
-	text-align: center;
-	vertical-align: middle;
-	border: 2px solid black;
-	border-collapse: collapse;
-	margin: 20px auto;
-	font-family: Verdana, Helvetica, serif;
-	}
-table tr:nth-child(even) {
-	background-color: #ccc;
-	}
-table tr:first-child {
-	border-bottom: 2px solid black;
-	font-weight: bold;
-	}
-td {
-	padding: 5px 15px 5px 15px;
-	border: 1px solid black;
-	}
-</style>
+	<title>U & Us | Account Information</title>
+	<link rel="stylesheet" type="text/css" href="./styles/media.css">
+	<link rel="stylesheet" type="text/css" href="./styles/table.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
 </head>
+	<nav class="navbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a href="./index.html" class="nav-link">
+					<div class="link-text">Home</div></a>
+			</li>
+			<li class="nav-item">
+				<a href="./services.html" class="nav-link">
+					<div class="link-text">Services</div></a>
+			</li>
+			<li class="nav-item">
+				<a href="./aboutus.html" class="nav-link">
+					<div class="link-text">Contact Us</div></a>
+			</li>	
+			<li class="nav-item">
+				<a href="./account.html" class="nav-link">
+					<div class="link-text">Account</div></a>
+			</li>										
+		</ul>
+	</nav>
 <body>
+<div class="webcontainer">
+		<br><br><br>
+			<p id="title1">U & Us</p>
+			<h2>Warehousing and Logistics</h2> 
+	<div class="contentcontainer">
 
 <?php
 @$dbConnect = new mysqli('localhost', 'root', '', 'accounts');
@@ -74,9 +79,7 @@ if (!$result){
 $dbConnect->close();
 //** end of input processing
 ?>
-<div id=header>
-	<h1>Thank You for Registering</h1>
-</div>
+<h1>Thank You for Registering</h1>
 <table>
 	<tr>
 		<td>User Id:</td>
@@ -115,5 +118,8 @@ $data = mysqli_query(@$dbConnect, "SELECT * FROM tbluser where firstname = '$fir
 
 //include'eventregistration.html'
 ?>
+</table>
+</div>
+</div>
 </body>
 </html>

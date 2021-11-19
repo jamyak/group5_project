@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>U & Us | Home</title>
+	<title>U & Us | Account Information</title>
 	<link rel="stylesheet" type="text/css" href="./styles/media.css">
 	<link rel="stylesheet" type="text/css" href="./styles/table.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
