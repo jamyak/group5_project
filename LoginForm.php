@@ -105,35 +105,13 @@ $data = mysqli_query(@$dbConnect, "SELECT * FROM tbluser where email = '$email' 
  echo "<td>" .$info['type']. " </td>";
  echo "<td>" .$info['compname']. " </td>";
  echo "</tr>";
-} 
+ } 
  ?>
 	
 <?php
-@$dbConnect = new mysqli('localhost', 'root', '', 'accounts');
-if (mysqli_connect_errno()) {
-	echo ("<p>Error: Unable to connect to database.</p>" .
-			"<p>Error code $dbConnect->connect_errno: $dbConnect->connect_error. </p>");
-	exit;
-	}
-$data = mysqli_query(@$dbConnect, "SELECT * FROM tblevent where email = '$email'") 
- or die(""); 
- #$info = mysqli_fetch_array($data);
 
- while($info = mysqli_fetch_array( $data )) 
- { 
- echo "<tr>";  
- echo "<td>" .$info['eventid'] . "</td>";
- echo "<td>".$info['datee'] . " </td>";
- echo "<td>".$info['phone']. " </td>";
- echo "<td>" .$info['guests']. " </td>";
- echo "<td>" .$info['eventtype']. " </td>";
- echo "<td>" .$info['venuetype']. " </td>";
- echo "<td>" .$info['foodtype']. " </td>";
- echo "<td>" .$info['decorationtype']. " </td>";
- echo "<td>" .$info['userid']. " </td>";
- echo "<td>" .$info['customerprice']. " </td>";
- echo "</tr>";
- }
+
+ 
 }
 
 ?>
